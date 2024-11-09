@@ -78,7 +78,7 @@ animation-play-state: paused;
 
 .footer-line{
 animation-name: line;
-animation-duration: 12s;
+animation-duration: 16s;
 animation-iteration-count: infinite;
 /* animation-direction:; */
 animation-timing-function: linear;
