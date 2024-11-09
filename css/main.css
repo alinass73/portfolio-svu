@@ -1,94 +1,106 @@
 
 /* for a smooth scroll */
 html{
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 ::selection {
-    background-color:#61533F;
-    color:#E0DDD1;
+  background-color:#61533F;
+  color:#E0DDD1;
 }
 
 
 @keyframes reveal {
-    0% {
-        /* opacity: 0.2; */
-        clip-path: inset(0 100% 0 0%);
-    }
-    100% {
-        /* opacity: 1; */
-        clip-path: inset(0 0% 0 0);
-    }
+  0% {
+      /* opacity: 0.2; */
+      clip-path: inset(0 100% 0 0%);
+  }
+  100% {
+      /* opacity: 1; */
+      clip-path: inset(0 0% 0 0);
+  }
 }
 
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+max-width: 1000px;
+position: relative;
+margin: auto;
 }
 
 /* Next & previous buttons */
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  /* color: ; */
-  /* font-weight: bold;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0; */
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-
-
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+padding: 16px;
+margin-top: -22px;
  
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+user-select: none;
 }
 
-/* The dots/bullets/indicators */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+background-color: #717171;
 }
 
 /* Fading animation */
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+.footer-line:hover{
+animation-play-state: paused;
+}
+
+.footer-line{
+animation-name: line;
+animation-duration: 12s;
+animation-iteration-count: infinite;
+/* animation-direction:; */
+animation-timing-function: linear;
+}
+
+@keyframes line {
+0%{
+  transform: translateX(100%);
+}
+100%{
+  transform: translateX(-100%);
+}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+from {opacity: .4} 
+to {opacity: 1}
 }
+
+
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+.prev, .next,.text {font-size: 11px}
 }
